@@ -1,4 +1,23 @@
 import request from "@/utils/request";
+
+export function get1() {
+  return request({
+    url: "/get1",
+    method: "GET",
+    params: {
+      username: "张三",
+      password: "123",
+    },
+  });
+}
+
+export function get2() {
+  return request({
+    url: "/get2/zs",
+    method: "GET",
+  });
+}
+
 export function post1() {
   return request({
     url: "/post1",

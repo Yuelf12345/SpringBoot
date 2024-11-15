@@ -22,17 +22,22 @@ public class DemoController {
     public String hello() {
         return "Hello, Spring Boot!";
     }
-    // 接收name参数
-    @GetMapping("/hello/{name}")
-    public String helloName(@PathVariable String name) {
-        System.out.println("name: " + name);
-        return "Hello, " + name + "!";
+
+    // get 接收参数
+    @GetMapping("/get1")
+    public String get1(@RequestParam String username, String password) {
+        return "Hello, " + username + password + "!";
     }
 
-    // 登录接口
-    // body 参数接收实体类
+    @GetMapping("/get2/{username}")
+    public String get2(@PathVariable String username) {
+        System.out.println("username: " + username);
+        return "Hello, " + username + "!";
+    }
+
+    // post 参数接收实体类
     @PostMapping("/post1")
-    public String login(@RequestBody LoginRequest request) {
+    public String post1(@RequestBody LoginRequest request) {
         System.out.println("username: " + request.getUsername());
         System.out.println("password: " + request.getPassword());
         return "username：" + request.getUsername() + "\npassword：" + request.getPassword();
