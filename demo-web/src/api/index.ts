@@ -33,7 +33,7 @@ export function post2() {
   return request({
     url: "/post2",
     method: "POST",
-    data: ['张三','李四','王五'],
+    data: ["张三", "李四", "王五"],
   });
 }
 
@@ -48,3 +48,13 @@ export function post3() {
   });
 }
 
+export function upload(file: any) {
+  return request({
+    url: "/upload",
+    method: "POST",
+    data: file,
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+}
