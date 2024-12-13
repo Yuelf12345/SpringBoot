@@ -4,6 +4,7 @@ import * as ElIconModules from  "@element-plus/icons-vue";
 import router from "@/router/index";
 import "element-plus/dist/index.css";
 import "./style.css";
+import '@/style/main.scss'
 import App from "./App.vue";
 
 const app = createApp(App);

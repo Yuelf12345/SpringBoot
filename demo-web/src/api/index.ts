@@ -48,7 +48,7 @@ export function post3() {
   });
 }
 
-export function upload(file: any) {
+export function upload(file:FormData) {
   return request({
     url: "/upload",
     method: "POST",

@@ -1,37 +1,39 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import { get1, get2, post1, post2, post3, upload } from '@/api/index'
-const onGet1 = () => {
+import type { UploadRawFile } from 'element-plus'
+const onGet1 = (): void => {
   get1().then(res => {
     console.log('res', res)
   })
 }
-const onGet2 = () => {
+const onGet2 = (): void => {
   get2().then(res => {
     console.log('res', res)
   })
 }
-const onPost1 = () => {
+const onPost1 = (): void => {
   post1().then(res => {
     console.log('res', res)
   })
 }
-const onPost2 = () => {
+const onPost2 = (): void => {
   post2().then(res => {
     console.log('res', res)
   })
 }
 
-const onPost3 = () => {
+const onPost3 = (): void => {
   post3().then(res => {
     console.log('res', res)
   })
 }
-
+const imageUrl = ref<string>('')
 // 文件
-const onUpload = (params: any) => {
+const onUpload = (params: { file: UploadRawFile }): void => {
   console.log('params', params)
   const fileObject = params.file
-  const file = new FormData()
+  const file: FormData = new FormData()
   file.append('file', fileObject)
   try {
     upload(file).then(res => {
