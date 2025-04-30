@@ -20,6 +20,11 @@ import {
           component: () => import("@/views/home.vue"),
         },
         {
+          path: "/student",
+          name: "Student",
+          component: () => import("@/views/student.vue"),
+        },
+        {
           path: "/test",
           name: "Test",
           component: () => import("@/views/test.vue"),

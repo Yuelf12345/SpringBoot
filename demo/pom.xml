@@ -14,10 +14,10 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
-	<licenses>
+	<licenses> <!-- 许可证 -->
 		<license/>
 	</licenses>
-	<developers>
+	<developers> <!-- 开发者信息 -->
 		<developer/>
 	</developers>
 	<scm>
@@ -29,7 +29,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-	<dependencies>
+	<dependencies> <!-- 依赖项 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -55,11 +55,17 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-
+		<!-- Lombok 用于简化实体类的 getter/setter/toString 等样板代码 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version> <!-- 版本号可按需更新 -->
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
+	<build> <!-- 项目构建 -->
+		<plugins> <!-- 插件配置 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -75,5 +81,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
