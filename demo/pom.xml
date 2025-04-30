@@ -59,9 +59,16 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.22</version> <!-- 版本号可按需更新 -->
+			<version>1.18.30</version> <!-- 版本号可按需更新 -->
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-annotation</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build> <!-- 项目构建 -->

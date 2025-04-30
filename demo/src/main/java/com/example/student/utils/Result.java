@@ -1,8 +1,8 @@
 package com.example.student.utils;
 
-//import lombok.Data;
-//
-//@Data
+import lombok.Data;
+
+@Data
 public class Result<T> {
     private int code;
     private String msg;
