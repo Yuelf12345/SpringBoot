@@ -6,3 +6,10 @@ export const getStudentList = () => {
     method: "GET"
   });
 }
+
+export const getStudentInfo = id => {
+  return request({
+    url: `/student/${id}`,
+    method: "GET"
+  });
+}

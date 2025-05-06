@@ -27,6 +27,11 @@ public class StudentServiceImpl implements StudentService {
         student2.setId(idGenerator.getAndIncrement());
         student2.setName("李四");
         students.add(student2);
+
+        Student student3 = new Student();
+        student3.setId(idGenerator.getAndIncrement());
+        student3.setName("王五");
+        students.add(student3);
     }
 
     @Override

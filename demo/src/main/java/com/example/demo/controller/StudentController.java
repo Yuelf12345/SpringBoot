@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Arrays;
 import java.util.List;
 
+import com.example.demo.utils.Result;
+
 @RestController
 //@RequestMapping("/student")
 public class StudentController {
@@ -18,25 +20,25 @@ public class StudentController {
     private StudentService studentService;
 
     @GetMapping("/student/list")
-    public List<Student> findAll() {
+    public Result<List<Student>> findAll() {
         System.out.println("/student/list");
-        return studentService.findAll();
+        return Result.success(studentService.findAll());
     }
 
-    @GetMapping("/{id}")
-    public Student findById(@PathVariable Long id) {
-        return studentService.findById(id);
+    @GetMapping("/student/{id}")
+    public Result<Student> findById(@PathVariable Long id) {
+        return Result.success(studentService.findById(id));
     }
 
     @PostMapping
-    public Student save(@RequestBody Student student) {
-        return studentService.save(student);
+    public Result<Student> save(@RequestBody Student student) {
+        return Result.success(studentService.save(student));
     }
 
     @PutMapping("/{id}")
-    public Student update(@PathVariable Long id, @RequestBody Student student) {
+    public Result<Student> update(@PathVariable Long id, @RequestBody Student student) {
         student.setId(id);
-        return studentService.update(student);
+        return Result.success(studentService.update(student));
     }
 
     @DeleteMapping("/{id}")
