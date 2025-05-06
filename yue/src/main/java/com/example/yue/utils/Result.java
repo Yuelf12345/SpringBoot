@@ -19,6 +19,11 @@ public class Result<T> {
         return new Result<>(HttpStatus.OK.value(), "success!", data);
     }
 
+// 请求失败
+    public static <T> Result<T> fail(Integer code,String message) {
+        return new Result<>(code, message, null);
+    }
+
     public Integer getCode() {
         return code;
     }

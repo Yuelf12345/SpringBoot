@@ -5,6 +5,7 @@ import com.example.yue.entity.dto.UserDTO;
 import com.example.yue.service.UserService;
 import com.example.yue.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,9 +18,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//增加
+//增加 Validated校验参数
     @PostMapping
-    public Result<User> addUser(@RequestBody UserDTO user){
+    public Result<User> addUser(@Validated @RequestBody UserDTO user){
         User newUser = userService.addUser(user);
         return Result.success(newUser);
     }
