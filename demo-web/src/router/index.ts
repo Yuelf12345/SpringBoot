@@ -28,6 +28,11 @@ import {
           path: "/test",
           name: "Test",
           component: () => import("@/views/test.vue"),
+        },
+        {
+          path: "/user",
+          name: "User",
+          component: () => import("@/views/user.vue"),
         }
       ],
     },
