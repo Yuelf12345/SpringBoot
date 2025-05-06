@@ -23,4 +23,32 @@ public class UserServiceImpl implements UserService {
         BeanUtils.copyProperties(user, userObj);
         return userMapper.save(userObj);
     }
+    /**
+     * 根据id查询用户
+     * @param userId
+     */
+    @Override
+    public User getUser(Integer userId) {
+        return userMapper.findById(userId).orElseThrow(()->{
+            throw new IllegalArgumentException("用户不存在");
+        });
+    }
+    /**
+     * 更新用户
+     * @param user
+     */
+    @Override
+    public User updateUser(UserDTO user) {
+        User  userObj = new User();
+        BeanUtils.copyProperties(user, userObj);
+        return userMapper.save(userObj);
+    }
+    /**
+     * 删除用户
+     * @param userId
+     */
+    @Override
+    public void deleteUser(Integer userId) {
+        userMapper.deleteById(userId);
+    }
 }

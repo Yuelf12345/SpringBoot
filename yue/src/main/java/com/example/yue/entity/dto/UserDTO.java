@@ -5,6 +5,9 @@ import jakarta.validation.constraints.Email;
 
 public class UserDTO {
 
+    private Integer userId;
+
+
 //    @NotBlank(message="用户名不能为空") // 去除空格
 //    @NotEmpty
     private String userName;
@@ -36,6 +39,14 @@ public class UserDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     @Override

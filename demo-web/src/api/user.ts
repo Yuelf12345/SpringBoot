@@ -7,3 +7,25 @@ export const addUser = (data:any) => {
     data
   });
 }
+
+export const getUser = (id:number) => {
+  return request({
+    url: `/user/${id}`,
+    method: "GET"
+  });
+}
+
+export const updatedUser = (data:any) => {
+  return request({
+    url: "/user",
+    method: "PUT",
+    data
+  });
+}
+
+export const deleteUser = (id:number) => {
+  return request({
+    url: `/user/${id}`,
+    method: "DELETE"
+  });
+}
