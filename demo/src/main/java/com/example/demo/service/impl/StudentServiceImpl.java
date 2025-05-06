@@ -1,8 +1,8 @@
-package com.example.student.service.impl;
+package com.example.demo.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.student.entity.Student;
-import com.example.student.mapper.StudentMapper;
-import com.example.student.service.StudentService;
+import com.example.demo.entity.Student;
+import com.example.demo.mapper.StudentMapper;
+import com.example.demo.service.StudentService;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.example.student.utils;
+package com.example.demo.utils;
 
 import lombok.Data;
 
